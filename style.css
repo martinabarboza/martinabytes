@@ -1444,6 +1444,65 @@ img {
 .btn-submit {
   align-self: flex-start;
 }
+.form-message {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+
+  padding: 1rem 1.2rem;
+  border-radius: 12px;
+
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+
+  font-family: var(--font-code);
+  font-size: 0.9rem;
+
+  opacity: 0;
+  pointer-events: none;
+  z-index: 9999;
+
+  backdrop-filter: blur(10px);
+
+  transition: all var(--transition-smooth);
+}
+
+.form-message.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.form-message.success {
+  border-color: var(--cyan);
+  box-shadow: 0 0 15px rgba(132, 204, 22, 0.2);
+}
+
+.form-message.success .message-icon {
+  color: var(--cyan);
+}
+
+.form-message.error {
+  border-color: var(--accent);
+  box-shadow: 0 0 15px rgba(185, 28, 28, 0.2);
+}
+
+.form-message.error .message-icon {
+  color: var(--accent);
+}
+
+.message-icon {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.message-text {
+  color: var(--text-secondary);
+}
 
 .main-footer {
   background: var(--bg-card);

@@ -220,24 +220,33 @@ function initScrollEffects() {
 
 function initFormHandlers() {
   const contactForm = document.getElementById("contactForm");
+
   if (contactForm) {
-    contactForm.addEventListener("submit", handleFormSubmit);
+    contactForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const form = e.target;
+      const formData = new FormData(form);
+
+      try {
+        const response = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          body: formData,
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+          showMessage("Mensaje enviado correctamente ✅");
+          form.reset();
+        } else {
+          showMessage("Error al enviar ❌");
+        }
+      } catch (error) {
+        showMessage("Error de conexión ❌");
+      }
+    });
   }
-}
-
-function handleFormSubmit(e) {
-  e.preventDefault();
-  const formData = new FormData(e.target);
-  const data = Object.fromEntries(formData);
-  console.log("Form submitted:", data);
-
-  const message =
-    AppState.currentLang === "es"
-      ? "Mensaje enviado correctamente!"
-      : "Message sent successfully!";
-
-  alert(message);
-  e.target.reset();
 }
 
 function initMobileMenu() {
@@ -855,3 +864,26 @@ window.Animation = {
   initParallax,
   initSmoothScroll,
 };
+
+function showMessage(text, type = "success") {
+  let msg = document.createElement("div");
+  msg.className = `form-message ${type}`;
+
+  const icon = type === "success" ? "✔" : "✖";
+
+  msg.innerHTML = `
+    <span class="message-icon">${icon}</span>
+    <span class="message-text">${text}</span>
+  `;
+
+  document.body.appendChild(msg);
+
+  setTimeout(() => {
+    msg.classList.add("show");
+  }, 10);
+
+  setTimeout(() => {
+    msg.classList.remove("show");
+    setTimeout(() => msg.remove(), 300);
+  }, 3000);
+}
