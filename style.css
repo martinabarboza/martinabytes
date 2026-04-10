@@ -1776,6 +1776,10 @@ img {
     height: 45px;
   }
 
+  .scroll-indicator {
+    display: none;
+  }
+
   .section {
     padding: 2rem 0;
   }
