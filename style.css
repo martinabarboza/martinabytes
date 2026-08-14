@@ -898,42 +898,52 @@
       box-shadow: 0 12px 30px rgba(0,0,0,.06);
     }
 
-    .project-image {
-      position: relative;
+ .project-image {
+  position: relative;
 
-      height: 180px;
+  width: 100%;
+  aspect-ratio: 16 / 10;
 
-      background: #f0f0f2;
+  overflow: hidden;
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+  background: #f0f0f2;
+}
 
-    .project-placeholder {
-      font-size: 2.3rem;
-      color: var(--primary-color);
-    }
+.project-image img {
+  width: 100%;
+  height: 100%;
 
-    .project-overlay {
-      position: absolute;
-      inset: 0;
+  display: block;
 
-      background: rgba(255,255,255,.9);
+  object-fit: cover;
+  object-position: center center;
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
+  transition: transform .5s ease;
+}
 
-      opacity: 0;
+.project-card:hover .project-image img {
+  transform: scale(1.04);
+}
 
-      transition: opacity .2s ease;
-    }
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
 
-    .project-card:hover .project-overlay {
-      opacity: 1;
-    }
+  background: rgba(255, 255, 255, .9);
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+
+  transition: opacity .2s ease;
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
     .project-links {
       display: flex;
       gap: 8px;
