@@ -1,1083 +1,1511 @@
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"
-    />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="description" content="Frontend Developer portfolio - Martina Barboza">
-    <meta property="og:title" content="Martina Barboza - Portfolio">
-<meta property="og:image" content="preview.png">
-<meta name="description" content="Desarrolladora web junior en Uruguay. Especializada en frontend, sistemas y desarrollo de aplicaciones web con HTML, CSS, JavaScript, React y PHP. Disponible para oportunidades laborales en Salto y remoto." />
+<head>
+  <meta charset="UTF-8">
 
-<meta name="keywords" content="
-desarrollador junior Uruguay,
-programador Uruguay,
-desarrolladora web Uruguay,
-frontend developer Uruguay,
-desarrollador Salto,
-programador Salto Uruguay,
-desarrollador web junior,
-frontend developer junior,
-web developer Uruguay,
-JavaScript developer Uruguay,
-React developer Uruguay,
-PHP developer Uruguay,
-desarrollador remoto Uruguay,
-portfolio desarrollador web,
-estudiante informática Uruguay
-" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"
+  >
 
-<meta name="author" content="Martina Barboza" />
-<meta property="og:title" content="Martina Barboza - Web Developer Portfolio" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<meta property="og:description" content="Desarrolladora web junior en Uruguay especializada en frontend, sistemas y desarrollo de aplicaciones web. Disponible para oportunidades laborales." />
+  <meta
+    name="description"
+    content="Martina Barboza — Web developer from Uruguay focused on web development, systems and software quality."
+  >
 
-<meta property="og:image" content="https://tudominio.com/preview.png" />
+  <meta
+    name="keywords"
+    content="web developer Uruguay, frontend developer Uruguay, JavaScript developer Uruguay, React developer Uruguay, PHP developer Uruguay, software developer Uruguay, portfolio Martina Barboza"
+  >
 
-<meta property="og:type" content="website" />
+  <meta name="author" content="Martina Barboza">
 
-<meta property="og:url" content="https://martinabytes.vercel.app" />
-    <title>martinabytes</title>
+  <meta property="og:title" content="Martina Barboza — Web Developer Portfolio">
 
-    <!-- Tailwind CSS (CDN for development only) -->
-    <script>
-      // Suppress Tailwind CDN warning
-      if (typeof console !== "undefined" && console.warn) {
-        const originalWarn = console.warn;
-        console.warn = function (...args) {
-          if (
-            args[0] &&
-            typeof args[0] === "string" &&
-            args[0].includes("tailwindcss.com")
-          ) {
-            return; // Suppress Tailwind CDN warning
-          }
-          originalWarn.apply(console, args);
-        };
-      }
-    </script>
-    <script src="https://cdn.tailwindcss.com"></script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-762K12E8SM"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <meta
+    property="og:description"
+    content="Web developer from Uruguay focused on web development, systems and software quality."
+  >
 
-  gtag('config', 'G-762K12E8SM');
-</script>
-      <link rel="icon" href="martinabytes.png" type="image/png">
-    <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
+  <meta property="og:image" content="preview.png">
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=Fira+Code:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+  <meta property="og:type" content="website">
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body class="body-main" data-theme="dark" data-lang="en">
-    <!-- Loading Screen -->
-    <div class="loader-screen" id="loader">
-      <div class="loader-content">
-        <div class="loader-code-text">
-          <div class="code-line" data-line="1">const portfolio = {</div>
-          <div class="code-line" data-line="2">loading: true,</div>
-          <div class="code-line" data-line="3">state: 'initializing...'</div>
-          <div class="code-line" data-line="4">};</div>
+  <meta
+    property="og:url"
+    content="https://martinabytes.vercel.app"
+  >
+
+  <link rel="icon" href="martinabytes.png" type="image/png">
+
+  <title>martinabytes</title>
+<link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Fira+Code:wght@400;500&display=swap"
+    rel="stylesheet"
+  >
+
+</head>
+
+
+<body class="body-main" data-theme="light" data-lang="en">
+
+
+  <!-- =======================================================
+       LOADING SCREEN
+  ======================================================== -->
+
+  <div class="loader-screen" id="loader">
+
+    <div class="loader-content">
+
+      <div class="loader-code-text">
+        <div class="code-line" data-line="1">
+          const portfolio = {
         </div>
-        <div class="loader-spinner-wrapper">
-          <div class="loader-spinner"></div>
+
+        <div class="code-line" data-line="2">
+          loading: true,
         </div>
-        <div class="loader-progress-wrapper">
-          <div class="loader-progress-bar"></div>
+
+        <div class="code-line" data-line="3">
+          state: 'initializing...'
         </div>
-        <div class="loader-percentage" id="loaderPercent">0%</div>
+
+        <div class="code-line" data-line="4">
+          };
+        </div>
       </div>
+
+      <div class="loader-spinner-wrapper">
+        <div class="loader-spinner"></div>
+      </div>
+
+      <div class="loader-progress-wrapper">
+        <div class="loader-progress-bar"></div>
+      </div>
+
+      <div class="loader-percentage" id="loaderPercent">
+        0%
+      </div>
+
     </div>
 
-    <!-- Navigation Header -->
-    <header class="main-header" id="header">
-      <nav class="nav-container">
-        <div class="nav-brand">
-          <div class="brand-logo">
-            <span class="logo-bracket">&lt;</span>
-            <span class="logo-text">mar</span>
-            <span class="logo-bracket">/&gt;</span>
-          </div>
+  </div>
+
+
+  <!-- =======================================================
+       NAVIGATION
+  ======================================================== -->
+
+  <header class="main-header" id="header">
+
+    <nav class="nav-container">
+
+      <div class="nav-brand">
+
+        <div class="brand-logo">
+          <span class="logo-bracket">&lt;</span>
+          <span class="logo-text">mar</span>
+          <span class="logo-bracket">/&gt;</span>
         </div>
 
-        <div class="nav-menu" id="navMenu">
-          <a href="#home" class="nav-link active" data-section="home">
-            <i class="fas fa-home"></i>
-            <span class="nav-text" data-text-en="home" data-text-es="inicio"
-              >home</span
-            >
-          </a>
-          <a href="#about" class="nav-link" data-section="about">
-            <i class="fas fa-user"></i>
-            <span class="nav-text" data-text-en="about" data-text-es="sobre mí"
-              >about</span
-            >
-          </a>
-          <a href="#skills" class="nav-link" data-section="skills">
-            <i class="fas fa-code"></i>
-            <span
-              class="nav-text"
-              data-text-en="skills"
-              data-text-es="habilidades"
-              >skills</span
-            >
-          </a>
-          <a href="#experience" class="nav-link" data-section="experience">
-            <i class="fas fa-briefcase"></i>
-            <span
-              class="nav-text"
-              data-text-en="experience"
-              data-text-es="experiencia"
-              >experience</span
-            >
-          </a>
-          <a href="#projects" class="nav-link" data-section="projects">
-            <i class="fas fa-rocket"></i>
-            <span
-              class="nav-text"
-              data-text-en="projects"
-              data-text-es="proyectos"
-              >projects</span
-            >
-          </a>
-          <a href="#contact" class="nav-link" data-section="contact">
-            <i class="fas fa-envelope"></i>
-            <span
-              class="nav-text"
-              data-text-en="say hi!"
-              data-text-es="¡dime hola!"
-              >say hi!</span
-            >
-          </a>
-        </div>
+      </div>
 
-        <div class="nav-controls">
-          <button class="lang-toggle" id="langToggle" title="Toggle Language">
-            <i class="fas fa-language"></i>
-            <span class="lang-text">ES</span>
-          </button>
-          <button class="theme-toggle" id="themeToggle" title="Toggle Theme">
-            <i class="fas fa-moon"></i>
-          </button>
-          <button class="menu-toggle" id="menuToggle" title="Toggle Menu">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-        </div>
-      </nav>
-    </header>
 
-    <!-- Main Content -->
-    <main class="main-content">
-      <!-- Hero Section -->
-      <section id="home" class="hero-section">
-        <div class="hero-background">
-          <div class="code-grid-bg"></div>
-          <div class="floating-particles" id="particles"></div>
-        </div>
+      <div class="nav-menu" id="navMenu">
 
-        <div class="hero-container">
-          <div class="hero-content">
-            <div class="hero-greeting">
-              <span
-                class="greeting-text"
-                data-text-en="hello, I'm"
-                data-text-es="hola, soy"
-                >hello, I'm</span
-              >
-              <span class="greeting-cursor">|</span>
-            </div>
+        <a href="#home"
+           class="nav-link active"
+           data-section="home">
 
-            <h1 class="hero-name" id="heroName">
-              <span class="name-prefix">const </span>
-              <span class="name-operator">name </span>  <span class="name-prefix">=</span>
-              <span class="name-value">martina</span>
-              <span class="name-suffix">;</span>
-            </h1>
-
-            <div class="hero-title">
-              <span class="title-prefix">//</span>
-              <span
-                class="title-text"
-                data-text-en="Web Development, Systems & Software Quality"
-                data-text-es="Desarrollo Web, Sistemas y Calidad de Software"
-                >Web Development, Systems & Software Quality</span
-              >
-            </div>
-
-           <p
-  class="hero-description"
-  data-text-en="Technology enthusiast focused on building digital applications and systems. I have experience developing both frontend and backend solutions aimed at optimizing processes and improving user experience. I am passionate about creating efficient, scalable, and functional digital products."
-  data-text-es="Entusiasta de la tecnología enfocada en el desarrollo de aplicaciones y sistemas digitales. Tengo experiencia en la creación de soluciones tanto frontend como backend, orientadas a optimizar procesos y mejorar la experiencia del usuario. Me interesa construir productos digitales eficientes, escalables y funcionales."
->
- Technology enthusiast focused on building digital applications and systems. I have experience developing both frontend and backend solutions aimed at optimizing processes and improving user experience. I am passionate about creating efficient, scalable, and functional digital products.
-</p>
-
-            <div class="hero-buttons">
-              <a href="#contact" class="btn btn-primary">
-                <span data-text-en="contact me" data-text-es="contactame"
-                  >contact me</span
-                >
-                <i class="fas fa-arrow-right"></i>
-              </a>
-              <a href="#projects" class="btn btn-secondary">
-                <span data-text-en="view projects" data-text-es="ver proyectos"
-                  >view projects</span
-                >
-                <i class="fas fa-code"></i>
-              </a>
-            </div>
-          </div>
-
-          <div class="hero-image-wrapper">
-            <div class="hero-image-container">
-              <div class="profile-image-glow"></div>
-              <div class="profile-image-frame">
-                <div class="profile-image" id="profileImage">
-                  <div class="profile-placeholder">
-                    <i class="fas fa-code"></i>
-                  </div>
-                </div>
-              </div>
-              <div class="floating-badge badge-1">
-                <i class="fab fa-html5"></i>
-                <div class="badge-content">
-                  <span class="badge-title">Web Development</span>
-                  <span class="badge-libs">HTML5, CSS3, Tailwind CSS</span>
-                </div>
-              </div>
-              <div class="floating-badge badge-2">
-                <i class="fab fa-php"></i>
-                <div class="badge-content">
-                  <span class="badge-title">PHP</span>
-                  <span class="badge-libs">MySQL, MariaDB, Apache</span>
-                </div>
-              </div>
-              <div class="floating-badge badge-3">
-                <i class="fab fa-js"></i>
-                <div class="badge-content">
-                  <span class="badge-title">JavaScript</span>
-                  <span class="badge-libs">ES6+, TypeScript, jQuery</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="scroll-indicator">
-          <div class="scroll-mouse">
-            <div class="scroll-wheel"></div>
-          </div>
           <span
-            class="scroll-text"
-            data-text-en="scroll down"
-            data-text-es="desliza hacia abajo"
-            >scroll down</span
-          >
-        </div>
-      </section>
+            class="nav-text"
+            data-text-en="home"
+            data-text-es="inicio">
+            home
+          </span>
 
-      <!-- About Section -->
-      <section id="about" class="section about-section">
-        <div class="section-container">
-          <div class="section-header">
-            <span class="section-number">01</span>
-            <h2 class="section-title">
-              <span class="title-bracket">&lt;</span>
-              <span
-                class="title-text"
-                data-text-en="about me"
-                data-text-es="sobre mí"
-                >about me</span
-              >
-              <span class="title-bracket">/&gt;</span>
-            </h2>
-            <div class="section-line"></div>
+        </a>
+
+
+
+
+        <a href="#skills"
+           class="nav-link"
+           data-section="skills">
+
+          <span
+            class="nav-text"
+            data-text-en="skills"
+            data-text-es="habilidades">
+            skills
+          </span>
+
+        </a>
+
+
+        <a href="#experience"
+           class="nav-link"
+           data-section="experience">
+
+          <span
+            class="nav-text"
+            data-text-en="experience"
+            data-text-es="experiencia">
+            experience
+          </span>
+
+        </a>
+
+
+        <a href="#projects"
+           class="nav-link"
+           data-section="projects">
+
+          <span
+            class="nav-text"
+            data-text-en="projects"
+            data-text-es="proyectos">
+            projects
+          </span>
+
+        </a>
+
+
+        <a href="#contact"
+           class="nav-link"
+           data-section="contact">
+
+          <span
+            class="nav-text"
+            data-text-en="say hi!"
+            data-text-es="hablame!">
+            say hi!
+          </span>
+
+        </a>
+
+      </div>
+
+
+      <div class="nav-controls">
+
+        <button
+          class="lang-toggle"
+          id="langToggle"
+          title="Toggle Language">
+
+          <span class="lang-text">ES</span>
+
+        </button>
+
+
+        <button
+          class="theme-toggle"
+          id="themeToggle"
+          title="Toggle Theme">
+
+          <span>☾</span>
+
+        </button>
+
+
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          title="Toggle Menu">
+
+          <span></span>
+          <span></span>
+          <span></span>
+
+        </button>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+
+  <!-- =======================================================
+       MAIN
+  ======================================================== -->
+
+  <main class="main-content">
+
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <section id="home" class="hero-section">
+
+      <div class="hero-container">
+
+        <div class="hero-content">
+
+          <div class="hero-greeting">
+
+            <span
+              class="greeting-text"
+              data-text-en="hi, I'm"
+              data-text-es="hola, soy">
+              hi, I'm
+            </span>
+
+            <span class="greeting-cursor">|</span>
+
           </div>
 
-          <div class="about-content">
-            <div class="about-text-wrapper">
-              <div class="about-intro">
-                <p
-                  class="about-text"
-                  data-text-en="I am a web developer with both self-taught and academic training. I have knowledge of databases and networking fundamentals, and I am currently expanding my skills in software quality and IT support. I am interested in understanding how systems work, solving technical problems, and improving digital processes. I enjoy tackling challenges and working with technology to build practical and efficient digital solutions."
-                  data-text-es="Soy desarrolladora web con formación autodidacta y académica. Tengo conocimientos en bases de datos y fundamentos de redes y actualmente estoy ampliando mis conocimientos en calidad de software y soporte IT. Me interesa entender cómo funcionan los sistemas, resolver problemas técnicos y mejorar procesos digitales. Disfruto resolver desafíos y trabajar con tecnología para crear soluciones digitales prácticas y eficientes.
-"
-                >
-I am a web developer with both self-taught and academic training. I have knowledge of databases and networking fundamentals, and I am currently expanding my skills in software quality and IT support. I am interested in understanding how systems work, solving technical problems, and improving digital processes. I enjoy tackling challenges and working with technology to build practical and efficient digital solutions.
-                </p>
-              </div>
 
-              <div class="about-stats">
-                <div class="stat-item">
-                  <div class="stat-number" data-count="1000">0</div>
-                  <div
-                    class="stat-label"
-                    data-text-en="hours of practice"
-                    data-text-es="horas de práctica"
-                  >
-                    hours of practice
-                  </div>
-                </div>
-                <div class="stat-item">
-                  <div class="stat-number" data-count="3">0</div>
-                  <div
-                    class="stat-label"
-                    data-text-en="years learning and building projects"
-                    data-text-es="años aprendiendo y armando proyectos"
-                  >
-                    years learning and building projects
-                  </div>
-                </div>
-                <div class="stat-item">
-                  <div class="stat-number" data-count="500">0</div>
-                  <div
-                    class="stat-label"
-                    data-text-en="coding sessions"
-                    data-text-es="sesiones de programación"
-                  >
-                    coding sessions
-                  </div>
-                </div>
-              </div>
-            </div>
+          <h1 class="hero-name" id="heroName">
 
-            <div class="about-image-wrapper">
-              <div class="about-image-container">
-                <div class="code-block">
-                  <div class="code-line">
-                    <span class="code-keyword">const</span>
-                    <span class="code-variable">dev</span>
-                    <span class="code-operator">=</span>
-                    <span class="code-brace">{</span>
-                  </div>
-                  <div class="code-line indent">
-                    <span class="code-property">name</span>
-                    <span class="code-operator">:</span>
-                    <span class="code-string">'Martina'</span>
-                    <span class="code-comma">,</span>
-                  </div>
-                  <div class="code-line indent">
-                    <span class="code-property">skills</span>
-                    <span class="code-operator">:</span>
-                    <span class="code-bracket">[</span>
-                    <span class="code-string">'Web Development'</span>
-                    <span class="code-comma">,</span>
-                    <span class="code-string">'PHP'</span>
-                    <span class="code-comma">,</span><span class="code-string">'JavaScript'</span>
-                    <span class="code-bracket">]</span>
-                    <span class="code-comma">,</span>
-                  </div>
-                  <div class="code-line indent">
-                    <span class="code-property">passion</span>
-                    <span class="code-operator">:</span>
-                    <span class="code-string">'Coding'</span>
-                  </div>
-                  <div class="code-line">
-                    <span class="code-brace">}</span>
-                    <span class="code-semicolon">;</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+            <span class="name-prefix">const </span>
+            <span class="name-operator">name </span>
+            <span class="name-prefix">=</span>
+            <span class="name-value">martina</span>
+            <span class="name-suffix">;</span>
 
-      <!-- Skills Section -->
-      <section id="skills" class="section skills-section">
-        <div class="section-container">
-          <div class="section-header">
-            <span class="section-number">02</span>
-            <h2 class="section-title">
-              <span class="title-bracket">&lt;</span>
-              <span
-                class="title-text"
-                data-text-en="skills"
-                data-text-es="habilidades"
-                >skills</span
-              >
-              <span class="title-bracket">/&gt;</span>
-            </h2>
-            <div class="section-line"></div>
+          </h1>
+
+
+          <div class="hero-title">
+
+            <span class="title-prefix">//</span>
+
+            <span
+              class="title-text"
+              data-text-en="Web Development, Networks & Software Quality"
+              data-text-es="Desarrollo Web, Redes y Calidad de Software">
+
+              Web Development, Networks & Software Quality
+
+            </span>
+
           </div>
 
-          <div class="skills-grid">
-            <div class="skill-category">
-              <h3
-                class="category-title"
-                data-text-en="frontend"
-                data-text-es="frontend"
-              >
-                Frontend
-              </h3>
-              <div class="skill-items">
-                <div class="skill-item" data-skill="HTML5" data-percent="85">
-                  <div class="skill-header">
-                    <span class="skill-name">HTML5</span>
-                    <span class="skill-percent">0%</span>
-                  </div>
-                  <div class="skill-bar">
-                    <div class="skill-progress"></div>
-                  </div>
-                </div>
-                <div class="skill-item" data-skill="CSS3" data-percent="75">
-                  <div class="skill-header">
-                    <span class="skill-name">CSS3</span>
-                    <span class="skill-percent">0%</span>
-                  </div>
-                  <div class="skill-bar">
-                    <div class="skill-progress"></div>
-                  </div>
-                </div>
-                <div
-                  class="skill-item"
-                  data-skill="JavaScript"
-                  data-percent="80"
-                >
-                  <div class="skill-header">
-                    <span class="skill-name">JavaScript</span>
-                    <span class="skill-percent">0%</span>
-                  </div>
-                  <div class="skill-bar">
-                    <div class="skill-progress"></div>
-                  </div>
-                </div>
-                <div
-                  class="skill-item"
-                  data-skill="Tailwind CSS"
-                  data-percent="70"
-                >
-                  <div class="skill-header">
-                    <span class="skill-name">React</span>
-                    <span class="skill-percent">0%</span>
-                  </div>
-                  <div class="skill-bar">
-                    <div class="skill-progress"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
 
-            <div class="skill-category">
-              <h3
-                class="category-title"
-                data-text-en="backend"
-                data-text-es="backend"
-              >
-                backend
-              </h3>
-              <div class="skill-items">
-                <div class="skill-item" data-skill="PHP" data-percent="75">
-                  <div class="skill-header">
-                    <span class="skill-name">PHP</span>
-                    <span class="skill-percent">0%</span>
-                  </div>
-                  <div class="skill-bar">
-                    <div class="skill-progress"></div>
-                  </div>
-                </div>
-                <div class="skill-item" data-skill="MySQL" data-percent="80">
-                  <div class="skill-header">
-                    <span class="skill-name">MySQL</span>
-                    <span class="skill-percent">0%</span>
-                  </div>
-                  <div class="skill-bar">
-                    <div class="skill-progress"></div>
-                  </div>
-                </div>
-                <div
-                  class="skill-item"
-                  data-skill="SQL Server"
-                  data-percent="50"
-                >
-                  <div class="skill-header">
-                    <span class="skill-name">SQL Server</span>
-                    <span class="skill-percent">0%</span>
-                  </div>
-                  <div class="skill-bar">
-                    <div class="skill-progress"></div>
-                  </div>
-                </div>
-                <div class="skill-item" data-skill="REST API" data-percent="40">
-                  <div class="skill-header">
-                    <span class="skill-name">REST API</span>
-                    <span class="skill-percent">0%</span>
-                  </div>
-                  <div class="skill-bar">
-                    <div class="skill-progress"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="skill-category">
-              <h3
-                class="category-title"
-                data-text-en="tools & others"
-                data-text-es="herramientas y otros"
-              >
-                tools & others
-              </h3>
-              <div class="skill-items">
-                <div class="skill-item" data-skill="Git" data-percent="60">
-                  <div class="skill-header">
-                    <span class="skill-name">Git</span>
-                    <span class="skill-percent">0%</span>
-                  </div>
-                  <div class="skill-bar">
-                    <div class="skill-progress"></div>
-                  </div>
-                </div>
-                <div class="skill-item" data-skill="Github" data-percent="65">
-                  <div class="skill-header">
-                    <span class="skill-name">Github</span>
-                    <span class="skill-percent">0%</span>
-                  </div>
-                  <div class="skill-bar">
-                    <div class="skill-progress"></div>
-                  </div>
-                </div>
-                <div class="skill-item" data-skill="Jira" data-percent="70">
-                  <div class="skill-header">
-                    <span class="skill-name">Jira</span>
-                    <span class="skill-percent">0%</span>
-                  </div>
-                  <div class="skill-bar">
-                    <div class="skill-progress"></div>
-                  </div>
-                </div>
-                <div class="skill-item" data-skill="Trello" data-percent="88">
-                  <div class="skill-header">
-                    <span class="skill-name">Trello</span>
-                    <span class="skill-percent">0%</span>
-                  </div>
-                  <div class="skill-bar">
-                    <div class="skill-progress"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Experience Section -->
-      <section id="experience" class="section experience-section">
-        <div class="section-container">
-          <div class="section-header">
-            <span class="section-number">03</span>
-            <h2 class="section-title">
-              <span class="title-bracket">&lt;</span>
-              <span
-                class="title-text"
-                data-text-en="experience"
-                data-text-es="experiencia"
-                >experience</span
-              >
-              <span class="title-bracket">/&gt;</span>
-            </h2>
-            <div class="section-line"></div>
-          </div>
-
-          <div class="timeline">
-            <div class="timeline-item">
-              <div class="timeline-marker"></div>
-              <div class="timeline-content">
-                <div class="timeline-header">
-                  <div class="timeline-year">2026</div>
-                </div>
-                <h3
-                  class="timeline-title"
-                  data-text-en="Web Designer & Developer (Freelance)"
-                  data-text-es="Diseño y Desarrollo Web (Freelance)"
-                >
-                  Web Designer & Developer (Freelance)
-                </h3>
-                <a href="https://abrilstudio.vercel.app" target="_blank" class="timeline-company">
-                  <i class="fas fa-building"></i>
-                  Abril Studio - Graphic Design Freelancer
-                </a>
-                <p
-                  class="timeline-description"
-                  data-text-en="Designed and developed a website for a graphic designer, gathering requirements and visual preferences to build an interface aligned with her professional identity. Implemented a clear structure to showcase her portfolio and skills, prioritizing usability, responsive design, and user experience."
-                  data-text-es="Diseñé y desarrollé un sitio web para una diseñadora gráfica, relevando requerimientos y preferencias visuales para construir una interfaz alineada con su identidad profesional.
-Implementé una estructura clara para exhibir su portfolio y habilidades, priorizando usabilidad, diseño responsivo y experiencia de usuario."
-                >
-                 Designed and developed a website for a graphic designer, gathering requirements and visual preferences to build an interface aligned with her professional identity. Implemented a clear structure to showcase her portfolio and skills, prioritizing usability, responsive design, and user experience.
-                </p>
-                <div class="timeline-achievements">
-                  <div class="achievement-item">
-                    <i class="fas fa-check-circle"></i>
-                    <span
-                      data-text-en="UI design aligned with personal branding"
-                      data-text-es="Diseño UI alineado a marca personal"
-                      >UI design aligned with personal branding</span
-                    >
-                  </div>
-                  <div class="achievement-item">
-                    <i class="fas fa-check-circle"></i>
-                    <span
-                      data-text-en="User experience optimization"
-                      data-text-es="Optimización de experiencia de usuario"
-                      >User experience optimization</span
-                    >
-                  </div>
-                  <div class="achievement-item">
-                    <i class="fas fa-check-circle"></i>
-                    <span
-                      data-text-en="Designed a clear structure to effectively showcase portfolio and skills."
-                      data-text-es="Desarrollo de sitio web completamente personalizado y alineado a la identidad visual de la clienta."
-                      >Designed a clear structure to effectively showcase
-                      portfolio and skills.</span
-                    >
-                  </div>
-                </div>
-                <div class="timeline-tags">
-                  <span class="tag">HTML</span>
-                  <span class="tag">CSS</span>
-                  <span class="tag">JavaScript</span>
-                  <span class="tag">PHP</span>
-                  <span class="tag">MariaDB</span>
-                  <span class="tag">AWS</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="timeline-marker"></div>
-              <div class="timeline-content">
-                <div class="timeline-header">
-                  <div class="timeline-year">2025 - Present</div>
-                  <div class="timeline-badge" data-text-en="Ongoing" data-text-es="En curso">Ongoing</div>
-                </div>
-                <h3
-                  class="timeline-title"
-                  data-text-en="Frontend & Backend Developer (Project-Based)"
-                  data-text-es="Desarrolladora Frontend y Backend (Proyecto)"
-                >
-                  Frontend & Backend Developer (Project-Based)
-                </h3>
-                <a href="https://www.fvet.edu.uy" target="_blank" class="timeline-company">
-                  <i class="fas fa-building"></i>
-                  Facultad de Veterinaria — Universidad de la República
-                </a>
-                <p
-                  class="timeline-description"
-                  data-text-en="Developing a web-based system focused on clinical management and veterinary research, specialized in equine, canine, and feline care.
-The system includes features for managing medical records, appointment scheduling, and role-based access, aiming to improve workflows and decision-making."
-                  data-text-es="Desarrollo de un sistema web orientado a la gestión clínica e investigación veterinaria, con enfoque en atención de equinos, caninos y felinos.
-El sistema permite la administración de fichas clínicas, agenda médica y control de roles, incorporando funcionalidades para optimizar procesos y mejorar la toma de decisiones."
-                >
-                  Developed interactive user interfaces using React and Vue.js.
-                  Worked on improving user experience and performance
-                  optimization. Collaborated with designers to implement
-                  pixel-perfect designs.
-                </p>
-                <div class="timeline-achievements">
-                  <div class="achievement-item">
-                    <i class="fas fa-check-circle"></i>
-                    <span
-                      data-text-en="Designed and implemented a database for veterinary clinical records"
-                      data-text-es="Diseño e implementación de base de datos para fichas clínicas veterinarias"
-                      >Designed and implemented a database for veterinary
-                      clinical records</span
-                    >
-                  </div>
-                  <div class="achievement-item">
-                    <i class="fas fa-check-circle"></i>
-                    <span
-                      data-text-en="Developed a patient management system for equine, canine, and feline care"
-                      data-text-es="Desarrollo de sistema de gestión de pacientes equinos, caninos y felinos"
-                      >Developed a patient management system for equine, canine,
-                      and feline care</span
-                    >
-                  </div>
-                  <div class="achievement-item">
-                    <i class="fas fa-check-circle"></i>
-                    <span
-                      data-text-en="Implemented role-based access control"
-                      data-text-es="Implementación de control de acceso basado en roles"
-                      >Implemented role-based access control</span
-                    >
-                  </div>
-                  <div class="achievement-item">
-                    <i class="fas fa-check-circle"></i>
-                    <span
-                      data-text-en="Built appointment scheduling and management features"
-                      data-text-es="Desarrollo de agenda médica y organización de turnos"
-                      >Built appointment scheduling and management
-                      features</span
-                    >
-                  </div>
-                  <div class="achievement-item">
-                    <i class="fas fa-check-circle"></i>
-                    <span
-                      data-text-en="Agile team coordination and Scrum methodology implementation (as a Scrum Master)"
-                      data-text-es="Coordinación de equipos ágiles e implementación de metodología Scrum (como Scrum Master)"
-                      >Agile team coordination and Scrum methodology implementation (as a Scrum Master)</span
-                    >
-                  </div>
-                </div>
-                <div class="timeline-tags">
-                  <span class="tag">HTML5</span>
-                  <span class="tag">CSS3</span>
-                  <span class="tag">JavaScript</span>
-                  <span class="tag">PHP</span>
-                  <span class="tag">MySQL</span>
-                </div>
-              </div>
-            </div>
-      </section>
-
-      <!-- Projects Section -->
-      <section id="projects" class="section projects-section">
-        <div class="section-container">
-          <div class="section-header">
-            <span class="section-number">04</span>
-            <h2 class="section-title">
-              <span class="title-bracket">&lt;</span>
-              <span
-                class="title-text"
-                data-text-en="projects"
-                data-text-es="proyectos"
-                >projects</span
-              >
-              <span class="title-bracket">/&gt;</span>
-            </h2>
-            <div class="section-line"></div>
-          </div>
-
-          <div class="projects-grid">
-            <div class="project-card">
-              <div class="project-image">
-                <div class="project-overlay">
-                  <div class="project-links">
-                    <a href="https://leyclara.vercel.app/#consultar" target="_blank" class="project-link" title="View Project">
-                      <i class="fas fa-external-link-alt"></i>
-                    </a>
-                    <a href="https://github.com/martinabarboza/leyclara" target="_blank" class="project-link" title="View Code">
-                      <i class="fab fa-github"></i>
-                    </a>
-                  </div>
-                </div>
-                <div class="project-placeholder">
-<i class="fas fa-scale-balanced"></i>
-                </div>
-              </div>
-              <div class="project-content">
-              <h3
-  class="project-title"
-  data-text-en="Ley Clara"
-  data-text-es="Ley Clara"
->
-  Ley Clara
-</h3>
 <p
-  class="project-description"
-  data-text-en="IA assisted modern web platform for accessible legal information, built with React and optimized for performance and user experience."
-  data-text-es="Plataforma web moderna asistida con IA de información legal accesible, desarrollada con React y optimizada para rendimiento y experiencia de usuario."
+  class="hero-description"
+  data-text-en="Web developer and networking enthusiast from Uruguay. I build web systems by day, explore networks and infrastructure by night, and enjoy understanding how technology connects from applications to the systems behind them."
+  data-text-es="Desarrolladora web y entusiasta de las redes en Uruguay. Desarrollo sistemas web, exploro redes e infraestructura y disfruto entender cómo se conecta la tecnología, desde las aplicaciones hasta los sistemas que las hacen posibles."
 >
-  Modern web platform for accessible legal information, built with React and optimized for performance and user experience.
-</p>
-<div class="project-tags">
-  <span class="tag">React</span>
-  <span class="tag">Vite</span>
-  <span class="tag">Tailwind</span>
-  <span class="tag">JavaScript</span>
-</div>      </div>
-            </div>
+  Web developer and networking enthusiast from Uruguay. I build web systems by day, explore networks and infrastructure by night, and enjoy understanding how technology connects from applications to the systems behind them.
 
-            <div class="project-card">
-              <div class="project-image">
-                <div class="project-overlay">
-                  <div class="project-links">
-                    <a href="https://sistemasiga.vercel.app" target="_blank" class="project-link" title="View Project">
-                      <i class="fas fa-external-link-alt"></i>
-                    </a>
-                    <a href="https://github.com/martinabarboza/sistemasiga" target="_blank" class="project-link" title="View Code">
-                      <i class="fab fa-github"></i>
-                    </a>
-                  </div>
-                </div>
-                <div class="project-placeholder">
-                  <i class="fas fa-clipboard-list"></i>
-                </div>
-              </div>
-              <div class="project-content">
-              <h3
-  class="project-title"
-  data-text-en="SIGA System"
-  data-text-es="Sistema SIGA"
->
-  SIGA System
-</h3>
-<p
-  class="project-description"
-  data-text-en="SIGA is an administrative management web application built with React and Vite. It runs entirely in the browser and uses localStorage for data persistence, requiring no backend or database."
-  data-text-es="SIGA es una aplicación web de gestión administrativa construida con React y Vite. Funciona completamente en el navegador y utiliza localStorage como capa de persistencia, sin necesidad de base de datos ni backend."
->
-  SIGA is an administrative management web application built with React and Vite. It runs entirely in the browser and uses localStorage for data persistence, requiring no backend or database.
-</p>
-<div class="project-tags">
-  <span class="tag">TypeScript</span>
-  <span class="tag">Vite</span>
-  <span class="tag">JavaScript</span>
+
+
+          <div class="hero-buttons">
+
+            <a href="#contact" class="btn btn-primary">
+
+              <span
+                data-text-en="let's chat"
+                data-text-es="hablemos">
+                let's chat
+              </span>
+
+              <span>→</span>
+
+            </a>
+
+
+            <a href="#projects" class="btn btn-secondary">
+
+              <span
+                data-text-en="view projects"
+                data-text-es="ver proyectos">
+                view projects
+              </span>
+
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="hero-image-wrapper">
+
+          <div class="hero-image-container">
+
+            <div class="profile-image-glow"></div>
+
+            <div class="profile-image-frame">
+
+<div class="profile-image" id="profileImage">
+
+  <img
+    src="martinabarboza.jpeg"
+    alt="Martina Barboza"
+  />
+
 </div>
-              </div>
+
             </div>
 
-            <div class="project-card">
-              <div class="project-image">
-                <div class="project-overlay">
-                  <div class="project-links">
-                    <a href="https://github.com/martinabarboza/policlinico" target="_blank" class="project-link" title="View Code">
-                      <i class="fab fa-github"></i>
-                    </a>
-                  </div>
-                </div>
-                <div class="project-placeholder">
-                  <i class="fas fa-paw"></i>
-                </div>
+
+            <div class="floating-badge badge-1">
+
+              <div class="badge-content">
+
+                <span class="badge-title">
+                  Web Development
+                </span>
+
+                <span class="badge-libs">
+                  HTML, CSS, JavaScript
+                </span>
+
               </div>
-              <div class="project-content">
-              <h3
-  class="project-title"
-  data-text-en="Veterinary Clinic System"
-  data-text-es="Sistema de Policlínico Veterinario"
->
-  Veterinary Clinic System
-</h3>
-<p
-  class="project-description"
-  data-text-en="Web system for managing clinical records, appointments and internal processes, focused on efficiency and scalability."
-  data-text-es="Sistema web para la gestión de fichas clínicas, agenda médica y procesos internos, enfocado en eficiencia y escalabilidad."
->
-  Web system for managing clinical records, appointments and internal processes, focused on efficiency and scalability.
-</p>
-<div class="project-tags">
-  <span class="tag">PHP</span>
-  <span class="tag">MySQL</span>
-  <span class="tag">JavaScript</span>
+
+            </div>
+
+
+            <div class="floating-badge badge-2">
+
+<div class="badge-content">
+
+  <span class="badge-title">
+    PHP
+  </span>
+
+  <span class="badge-libs">
+   OOP, MySQL, PDO
+  </span>
+
 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <!-- Contact Section -->
-      <section id="contact" class="section contact-section">
-        <div class="section-container">
-          <div class="section-header">
-            <span class="section-number">05</span>
-            <h2 class="section-title">
-              <span class="title-bracket">&lt;</span>
-              <span
-                class="title-text"
-                data-text-en="contact me"
-                data-text-es="contactame"
-                >contact me</span
-              >
-              <span class="title-bracket">/&gt;</span>
-            </h2>
-            <div class="section-line"></div>
-          </div>
-
-          <div class="contact-content">
-            <div class="contact-info">
-              <div class="contact-item">
-                <div class="contact-icon">
-                  <i class="fas fa-envelope"></i>
-                </div>
-                <div class="contact-details">
-                  <h4
-                    class="contact-label"
-                    data-text-en="email"
-                    data-text-es="correo electronico"
-                  >
-                    email
-                  </h4>
-                  <a
-                    href="mailto:marbarbozapintos@gmail.com"
-                    class="contact-value"
-                    >marbarbozapintos@gmail.com</a
-                  >
-                </div>
-              </div>
-
-              <div class="contact-item">
-                <div class="contact-icon">
-                  <i class="fas fa-phone"></i>
-                </div>
-                <div class="contact-details">
-                  <h4
-                    class="contact-label"
-                    data-text-en="phone"
-                    data-text-es="teléfono"
-                  >
-                    phone
-                  </h4>
-                  <a href="tel:+59891428608" class="contact-value"
-                    >+59891428608</a
-                  >
-                </div>
-              </div>
-
-              <div class="contact-item">
-                <div class="contact-icon">
-                  <i class="fas fa-map-marker-alt"></i>
-                </div>
-                <div class="contact-details">
-                  <h4
-                    class="contact-label"
-                    data-text-en="location"
-                    data-text-es="ubicación"
-                  >
-                    location
-                  </h4>
-                  <span
-                    class="contact-value"
-                    data-text-en="Salto, Uruguay"
-                    data-text-es="Salto, Uruguay"
-                    >Salto, Uruguay</span
-                  >
-                </div>
-              </div>
             </div>
 
-<form action="https://api.web3forms.com/submit" method="POST" class="contact-form" id="contactForm">
 
-  <!-- HIDDEN ARRIBA -->
-  <input type="hidden" name="access_key" value="4f2b23b1-5321-439c-b9a2-8e3b15fd9591">
-  <input type="hidden" name="from_name" value="Portfolio Martina">
-  <input type="hidden" name="subject" value="Nuevo mensaje desde tu portfolio">
-  <input type="hidden" name="replyto" value="">
+            <div class="floating-badge badge-3">
 
-  <div class="form-group">
-    <input
-      type="text"
-      name="name"
-      class="form-input"
-      placeholder="name"
-      required
-    />
-  </div>
+              <div class="badge-content">
 
-  <div class="form-group">
-    <input
-      type="email"
-      name="email"
-      class="form-input"
-      placeholder="email"
-      oninput="this.form.replyto.value = this.value"
-      required
-    />
-  </div>
+<span class="badge-title">
+  JavaScript
+</span>
 
-  <div class="form-group">
-    <input
-      type="text"
-      name="user_subject"
-      class="form-input"
-      placeholder="subject"
-      required
-    />
-  </div>
+<span class="badge-libs">
+  React, Vite, TypeScript
+</span>
 
-  <div class="form-group">
-    <textarea
-      name="message"
-      class="form-input form-textarea"
-      rows="5"
-      placeholder="message"
-      required
-    ></textarea>
-  </div>
+              </div>
 
-  <button type="submit" class="btn btn-primary btn-submit" data-text-en="Send Message" data-text-es="Enviar Mensaje">
-    Send Message
-  </button>
+            </div>
 
-</form>
           </div>
-        </div>
-      </section>
-    </main>
 
-    <!-- Footer -->
-    <footer class="main-footer">
-      <div class="footer-container">
-        <div class="footer-content">
-          <div class="footer-text-wrapper">
-            <p class="footer-text">
-              <span class="footer-copyright">© 2026 Martina Barboza</span>
-              <span class="footer-divider">•</span>
-              <span class="footer-built" data-text-en="made with love and dedication" data-text-es="hecho con amor y dedicación">made with love and dedication</span>
-            </p>
-            <p class="footer-author">
-              <span class="footer-by-text" data-text-en="by" data-text-es="por"
-                >by</span
-              >
+        </div>
+
+      </div>
+
+    </section>
+
+
+<!-- =====================================================
+     SKILLS
+====================================================== -->
+
+<section id="skills" class="section skills-section">
+
+  <div class="section-container">
+
+    <div class="section-header">
+
+      <span class="section-number">02</span>
+
+      <h2 class="section-title">
+
+        <span class="title-bracket">&lt;</span>
+
+        <span
+          class="title-text"
+          data-text-en="skills"
+          data-text-es="habilidades">
+          skills
+        </span>
+
+        <span class="title-bracket">/&gt;</span>
+
+      </h2>
+
+      <div class="section-line"></div>
+
+    </div>
+
+
+    <div class="skills-grid">
+
+
+      <!-- FRONTEND -->
+      <div class="skill-category">
+
+        <h3
+          class="category-title"
+          data-text-en="frontend"
+          data-text-es="frontend">
+          frontend
+        </h3>
+
+        <div class="skill-tags">
+
+          <span class="skill-tag">
+            <i class="fab fa-html5"></i>
+            HTML5
+          </span>
+
+          <span class="skill-tag">
+            <i class="fab fa-css3-alt"></i>
+            CSS3
+          </span>
+
+          <span class="skill-tag">
+            <i class="fab fa-js"></i>
+            JavaScript
+          </span>
+
+          <span class="skill-tag">
+            <i class="fab fa-react"></i>
+            React
+          </span>
+
+          <span class="skill-tag">
+            <i class="fas fa-wind"></i>
+            Tailwind CSS
+          </span>
+
+          <span class="skill-tag">
+            <i class="fas fa-mobile-screen"></i>
+            Responsive Design
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <!-- BACKEND -->
+      <div class="skill-category">
+
+        <h3
+          class="category-title"
+          data-text-en="backend & databases"
+          data-text-es="backend y bases de datos">
+          backend & databases
+        </h3>
+
+        <div class="skill-tags">
+
+          <span class="skill-tag">
+            <i class="fab fa-php"></i>
+            PHP
+          </span>
+
+          <span class="skill-tag">
+            <i class="fas fa-database"></i>
+            MySQL
+          </span>
+
+          <span class="skill-tag">
+            <i class="fas fa-database"></i>
+            MariaDB
+          </span>
+
+          <span class="skill-tag">
+            <i class="fas fa-server"></i>
+            SQL Server
+          </span>
+
+          <span class="skill-tag">
+            <i class="fas fa-code"></i>
+            REST API
+          </span>
+
+          <span class="skill-tag">
+            <i class="fas fa-sitemap"></i>
+            MVC
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <!-- NETWORKING -->
+      <div class="skill-category">
+
+        <h3
+          class="category-title"
+          data-text-en="networking"
+          data-text-es="redes">
+          networking
+        </h3>
+
+        <div class="skill-tags">
+
+          <span class="skill-tag">
+            <i class="fas fa-network-wired"></i>
+            DHCP
+          </span>
+
+          <span class="skill-tag">
+            <i class="fas fa-globe"></i>
+            DNS
+          </span>
+
+          <span class="skill-tag">
+            <i class="fas fa-route"></i>
+            NAT
+          </span>
+
+          <span class="skill-tag">
+            <i class="fas fa-route"></i>
+            Routing
+          </span>
+
+          <span class="skill-tag">
+            <i class="fas fa-network-wired"></i>
+            TCP/IP
+          </span>
+
+          <span class="skill-tag">
+            <i class="fas fa-server"></i>
+            Network Services
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <!-- TOOLS -->
+      <div class="skill-category">
+
+        <h3
+          class="category-title"
+          data-text-en="tools & workflow"
+          data-text-es="herramientas y metodología">
+          tools & workflow
+        </h3>
+
+        <div class="skill-tags">
+
+          <span class="skill-tag">
+            <i class="fab fa-git-alt"></i>
+            Git
+          </span>
+
+          <span class="skill-tag">
+            <i class="fab fa-github"></i>
+            GitHub
+          </span>
+
+          <span class="skill-tag">
+            <i class="fab fa-docker"></i>
+            Docker
+          </span>
+
+          <span class="skill-tag">
+            <i class="fas fa-list-check"></i>
+            Jira
+          </span>
+
+          <span class="skill-tag">
+            <i class="fas fa-table-columns"></i>
+            Trello
+          </span>
+
+          <span class="skill-tag">
+            <i class="fas fa-arrows-rotate"></i>
+            Scrum
+          </span>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+    <!-- =====================================================
+         EXPERIENCE
+    ====================================================== -->
+
+    <section id="experience" class="section experience-section">
+
+      <div class="section-container">
+
+        <div class="section-header">
+
+          <span class="section-number">03</span>
+
+          <h2 class="section-title">
+
+            <span class="title-bracket">&lt;</span>
+
+            <span
+              class="title-text"
+              data-text-en="experience"
+              data-text-es="experiencia">
+              experience
+            </span>
+
+            <span class="title-bracket">/&gt;</span>
+
+          </h2>
+
+          <div class="section-line"></div>
+
+        </div>
+
+
+        <div class="timeline">
+
+
+          <div class="timeline-item">
+
+            <div class="timeline-marker"></div>
+
+            <div class="timeline-content">
+
+              <div class="timeline-header">
+                <div class="timeline-year">2026</div>
+              </div>
+
+
+              <h3
+                class="timeline-title"
+                data-text-en="Web Designer & Developer (Freelance)"
+                data-text-es="Diseño y Desarrollo Web (Freelance)">
+
+                Web Designer & Developer (Freelance)
+
+              </h3>
+
+
               <a
-                href="https://www.linkedin.com/in/martina-barboza-45114b24b/"
+                href="https://abrilstudio.vercel.app"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="footer-author-link"
-              >
-                <i class="fas fa-code"></i>
-                <span>Mar</span>
+                class="timeline-company">
+
+                Abril Studio — Graphic Design Freelancer
+
               </a>
-            </p>
+
+
+              <p
+                class="timeline-description"
+                data-text-en="Designed and developed a website for a graphic designer, gathering requirements and visual preferences to build an interface aligned with her professional identity. Implemented a clear structure to showcase her portfolio and skills, prioritizing usability, responsive design, and user experience."
+                data-text-es="Diseñé y desarrollé un sitio web para una diseñadora gráfica, relevando requerimientos y preferencias visuales para construir una interfaz alineada con su identidad profesional. Implementé una estructura clara para exhibir su portfolio y habilidades, priorizando usabilidad, diseño responsivo y experiencia de usuario.">
+
+                Designed and developed a website for a graphic designer,
+                gathering requirements and visual preferences to build an
+                interface aligned with her professional identity.
+
+              </p>
+
+
+              <div class="timeline-achievements">
+
+                <div class="achievement-item">
+                  <span>✓</span>
+
+                  <span
+                    data-text-en="UI design aligned with personal branding"
+                    data-text-es="Diseño UI alineado a marca personal">
+                    UI design aligned with personal branding
+                  </span>
+                </div>
+
+
+                <div class="achievement-item">
+                  <span>✓</span>
+
+                  <span
+                    data-text-en="User experience optimization"
+                    data-text-es="Optimización de experiencia de usuario">
+                    User experience optimization
+                  </span>
+                </div>
+
+
+                <div class="achievement-item">
+                  <span>✓</span>
+
+                  <span
+                    data-text-en="Designed a clear structure to effectively showcase portfolio and skills."
+                    data-text-es="Desarrollo de sitio web completamente personalizado y alineado a la identidad visual de la clienta.">
+
+                    Designed a clear structure to effectively showcase
+                    portfolio and skills.
+
+                  </span>
+                </div>
+
+              </div>
+
+
+              <div class="timeline-tags">
+
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+
+              </div>
+
+            </div>
+
           </div>
-          <div class="footer-social">
+
+
+          <div class="timeline-item">
+
+            <div class="timeline-marker"></div>
+
+            <div class="timeline-content">
+
+              <div class="timeline-header">
+
+                <div class="timeline-year">
+                  2025 — Present
+                </div>
+
+                <div
+                  class="timeline-badge"
+                  data-text-en="Ongoing"
+                  data-text-es="En curso">
+                  Ongoing
+                </div>
+
+              </div>
+
+
+              <h3
+                class="timeline-title"
+                data-text-en="Frontend & Backend Developer (Project-Based)"
+                data-text-es="Desarrolladora Frontend y Backend (Proyecto)">
+
+                Frontend & Backend Developer (Project-Based)
+
+              </h3>
+
+
+              <a
+                href="https://www.fvet.edu.uy"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="timeline-company">
+
+                Facultad de Veterinaria — Universidad de la República
+
+              </a>
+
+
+              <p
+                class="timeline-description"
+                data-text-en="Developing a web-based system focused on clinical management and veterinary research, specialized in equine, canine, and feline care. The system includes features for managing medical records, appointment scheduling, hospitalizations, laboratory studies, reporting and advanced research, aiming to improve workflows and support data-driven decision-making."
+                data-text-es="Desarrollo de un sistema web orientado a la gestión clínica e investigación veterinaria, especializado en la atención de equinos, caninos y felinos. El sistema integra fichas clínicas, agenda, hospitalizaciones, estudios de laboratorio, reportes e investigación avanzada, buscando optimizar procesos y apoyar la toma de decisiones basada en datos.">
+
+                Developing a web-based system focused on clinical management
+                and veterinary research, specialized in equine, canine, and
+                feline care.
+
+              </p>
+
+<div class="timeline-achievements">
+
+  <div class="achievement-item">
+
+    <span>✓</span>
+
+    <span
+      data-text-en="Led the development of the official veterinary management platform for Universidad de la República, centralizing clinical and administrative workflows"
+      data-text-es="Lideré el desarrollo de la plataforma oficial de gestión veterinaria para la Universidad de la República, centralizando procesos clínicos y administrativos">
+
+      Led the development of the official veterinary management platform for Universidad de la República, centralizing clinical and administrative workflows
+
+    </span>
+
+  </div>
+
+
+  <div class="achievement-item">
+
+    <span>✓</span>
+
+    <span
+      data-text-en="Designed and optimized a relational MariaDB database with 86 tables, applying normalization, strategic indexing, and analytical views"
+      data-text-es="Diseñé y optimicé una base de datos relacional de 86 tablas en MariaDB, aplicando normalización, indexación estratégica y vistas analíticas">
+
+      Designed and optimized a relational MariaDB database with 86 tables, applying normalization, strategic indexing, and analytical views
+
+    </span>
+
+  </div>
+
+
+  <div class="achievement-item">
+
+    <span>✓</span>
+
+    <span
+      data-text-en="Implemented role-based access control and a modular OOP/MVC architecture to protect clinical data and support collaborative workflows"
+      data-text-es="Implementé control de acceso basado en roles y una arquitectura modular POO/MVC para proteger datos clínicos y facilitar el trabajo colaborativo">
+
+      Implemented role-based access control and a modular OOP/MVC architecture to protect clinical data and support collaborative workflows
+
+    </span>
+
+  </div>
+
+
+
+  <div class="achievement-item">
+
+    <span>✓</span>
+
+    <span
+      data-text-en="Containerized the application with Docker to ensure consistent development and deployment environments"
+      data-text-es="Contenericé la aplicación con Docker para garantizar entornos de desarrollo y despliegue consistentes">
+
+      Containerized the application with Docker to ensure consistent development and deployment environments
+
+    </span>
+
+  </div>
+
+</div>
+
+
+              <div class="timeline-tags">
+
+                <span class="tag">HTML5</span>
+                <span class="tag">CSS3</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">PHP</span>
+                <span class="tag">MariaDB</span>
+                <span class="tag">Docker</span>
+                <span class="tag">Git</span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PROJECTS
+    ====================================================== -->
+
+    <section id="projects" class="section projects-section">
+
+      <div class="section-container">
+
+        <div class="section-header">
+
+          <span class="section-number">04</span>
+
+          <h2 class="section-title">
+
+            <span class="title-bracket">&lt;</span>
+
+            <span
+              class="title-text"
+              data-text-en="projects"
+              data-text-es="proyectos">
+              projects
+            </span>
+
+            <span class="title-bracket">/&gt;</span>
+
+          </h2>
+
+          <div class="section-line"></div>
+
+        </div>
+
+
+        <div class="projects-grid">
+
+
+          <!-- LEY CLARA -->
+
+          <div class="project-card">
+
+            <div class="project-image">
+
+              <div class="project-overlay">
+
+                <div class="project-links">
+
+                  <a
+                    href="https://leyclara.vercel.app/#consultar"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link"
+                    title="View Project">
+                    ↗
+                  </a>
+
+                  <a
+                    href="https://github.com/martinabarboza/leyclara"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link"
+                    title="View Code">
+                    &lt;/&gt;
+                  </a>
+
+                </div>
+
+              </div>
+
+              <div class="project-placeholder">
+                ⚖
+              </div>
+
+            </div>
+
+
+            <div class="project-content">
+
+              <h3
+                class="project-title"
+                data-text-en="Ley Clara"
+                data-text-es="Ley Clara">
+                Ley Clara
+              </h3>
+
+
+              <p
+                class="project-description"
+                data-text-en="AI-assisted modern web platform for accessible legal information, built with React and optimized for performance and user experience."
+                data-text-es="Plataforma web moderna asistida con IA para facilitar el acceso a información legal, desarrollada con React y optimizada para rendimiento y experiencia de usuario.">
+
+                AI-assisted modern web platform for accessible legal
+                information, built with React and optimized for performance
+                and user experience.
+
+              </p>
+
+
+              <div class="project-tags">
+
+                <span class="tag">React</span>
+                <span class="tag">Vite</span>
+                <span class="tag">Tailwind</span>
+                <span class="tag">JavaScript</span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- HOLA IRIS -->
+
+          <div class="project-card">
+
+            <div class="project-image">
+
+              <div class="project-overlay">
+
+                <div class="project-links">
+
+                  <a
+                    href="https://holairis.vercel.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link"
+                    title="View Project">
+                    ↗
+                  </a>
+
+                  <a
+                    href="https://github.com/martinabarboza/holairis"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link"
+                    title="View Code">
+                    &lt;/&gt;
+                  </a>
+
+                </div>
+
+              </div>
+
+
+              <div class="project-placeholder">
+                ✦
+              </div>
+
+            </div>
+
+
+            <div class="project-content">
+
+              <h3
+                class="project-title"
+                data-text-en="Hey Iris!"
+                data-text-es="Hola Iris!">
+                Hey Iris!
+              </h3>
+
+
+              <p
+                class="project-description"
+                data-text-en="A small personal project created for those days when exhaustion and pressure feel a little stronger. Enter a number from 1 to 197 and receive a piece of wisdom chosen for that moment, as a gentle reminder that not everything is as serious as it may seem."
+                data-text-es="Un pequeño proyecto personal creado para esos días en los que el cansancio y la presión se sienten un poco más fuertes. Ingresá un número del 1 al 197 y recibí una frase de sabiduría pensada para ese momento, como un pequeño recordatorio de que no todo es tan grave como parece.">
+
+                A small personal project created for those days when
+                exhaustion and pressure feel a little stronger. Enter a
+                number from 1 to 197 and receive a piece of wisdom chosen
+                for that moment.
+
+              </p>
+
+
+              <div class="project-tags">
+
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- RASTRO -->
+
+          <div class="project-card">
+
+            <div class="project-image">
+
+              <div class="project-overlay">
+
+                <div class="project-links">
+
+                  <a
+                    href="https://github.com/martinabarboza/policlinico"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link"
+                    title="View Code">
+                    &lt;/&gt;
+                  </a>
+
+                </div>
+
+              </div>
+
+
+              <div class="project-placeholder">
+                🐾
+              </div>
+
+            </div>
+
+
+            <div class="project-content">
+
+              <h3
+                class="project-title"
+                data-text-en="Rastro"
+                data-text-es="Rastro">
+                Rastro
+              </h3>
+
+
+              <p
+                class="project-description"
+                data-text-en="Comprehensive veterinary management and clinical research platform that integrates patient records, consultations, scheduling, hospitalizations, laboratory studies, reporting and advanced research tools into a centralized system designed to support both clinical practice and data-driven veterinary research."
+                data-text-es="Plataforma integral de gestión veterinaria e investigación clínica que integra fichas de pacientes, consultas, agenda, hospitalizaciones, estudios de laboratorio, reportes y herramientas avanzadas de investigación en un sistema centralizado, diseñado para apoyar tanto la práctica clínica como la investigación veterinaria basada en datos.">
+
+                Comprehensive veterinary management and clinical research
+                platform that integrates patient records, consultations,
+                scheduling, hospitalizations, laboratory studies, reporting
+                and advanced research tools into a centralized system.
+
+              </p>
+
+
+              <div class="project-tags">
+
+                <span class="tag">PHP</span>
+                <span class="tag">MariaDB</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Docker</span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CONTACT
+    ====================================================== -->
+
+    <section id="contact" class="section contact-section">
+
+      <div class="section-container">
+
+        <div class="section-header">
+
+          <span class="section-number">05</span>
+
+          <h2 class="section-title">
+
+            <span class="title-bracket">&lt;</span>
+
+            <span
+              class="title-text"
+              data-text-en="contact me"
+              data-text-es="contáctame">
+              contact me
+            </span>
+
+            <span class="title-bracket">/&gt;</span>
+
+          </h2>
+
+          <div class="section-line"></div>
+
+        </div>
+
+
+        <div class="contact-content">
+
+
+          <div class="contact-info">
+
+
+            <div class="contact-item">
+
+              <div class="contact-icon">
+                @
+              </div>
+
+              <div class="contact-details">
+
+                <h4
+                  class="contact-label"
+                  data-text-en="email"
+                  data-text-es="correo electrónico">
+                  email
+                </h4>
+
+                <a
+                  href="mailto:marbarbozapintos@gmail.com"
+                  class="contact-value">
+
+                  marbarbozapintos@gmail.com
+
+                </a>
+
+              </div>
+
+            </div>
+
+
+            <div class="contact-item">
+
+              <div class="contact-icon">
+                ☎
+              </div>
+
+              <div class="contact-details">
+
+                <h4
+                  class="contact-label"
+                  data-text-en="phone"
+                  data-text-es="teléfono">
+                  phone
+                </h4>
+
+                <a
+                  href="tel:+59891428608"
+                  class="contact-value">
+
+                  +598 91 428 608
+
+                </a>
+
+              </div>
+
+            </div>
+
+
+            <div class="contact-item">
+
+              <div class="contact-icon">
+                ●
+              </div>
+
+              <div class="contact-details">
+
+                <h4
+                  class="contact-label"
+                  data-text-en="location"
+                  data-text-es="ubicación">
+                  location
+                </h4>
+
+                <span class="contact-value">
+                  Salto, Uruguay
+                </span>
+
+              </div>
+
+            </div>
+
+
+          </div>
+
+
+          <form
+            action="https://api.web3forms.com/submit"
+            method="POST"
+            class="contact-form"
+            id="contactForm">
+
+
+            <input
+              type="hidden"
+              name="access_key"
+              value="4f2b23b1-5321-439c-b9a2-8e3b15fd9591">
+
+
+            <input
+              type="hidden"
+              name="from_name"
+              value="Portfolio Martina">
+
+
+            <input
+              type="hidden"
+              name="subject"
+              value="Nuevo mensaje desde tu portfolio">
+
+
+            <input
+              type="hidden"
+              name="replyto"
+              value="">
+
+
+            <div class="form-group">
+
+              <input
+                type="text"
+                name="name"
+                class="form-input"
+                placeholder="name"
+                required>
+
+            </div>
+
+
+            <div class="form-group">
+
+              <input
+                type="email"
+                name="email"
+                class="form-input"
+                placeholder="email"
+                oninput="this.form.replyto.value = this.value"
+                required>
+
+            </div>
+
+
+            <div class="form-group">
+
+              <input
+                type="text"
+                name="user_subject"
+                class="form-input"
+                placeholder="subject"
+                required>
+
+            </div>
+
+
+            <div class="form-group">
+
+              <textarea
+                name="message"
+                class="form-input form-textarea"
+                rows="5"
+                placeholder="message"
+                required></textarea>
+
+            </div>
+
+
+            <button
+              type="submit"
+              class="btn btn-primary btn-submit"
+              data-text-en="Send Message"
+              data-text-es="Enviar mensaje">
+
+              Send Message
+
+            </button>
+
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- =======================================================
+       FOOTER
+  ======================================================== -->
+
+  <footer class="main-footer">
+
+    <div class="footer-container">
+
+      <div class="footer-content">
+
+        <div class="footer-text-wrapper">
+
+          <p class="footer-text">
+
+            <span class="footer-copyright">
+              © 2026 Martina Barboza
+            </span>
+
+            <span class="footer-divider">
+              •
+            </span>
+
+            <span
+              class="footer-built"
+              data-text-en="made with love and dedication"
+              data-text-es="hecho con amor y dedicación">
+
+              made with love and dedication
+
+            </span>
+
+          </p>
+
+
+          <p class="footer-author">
+
+            <span
+              class="footer-by-text"
+              data-text-en="by"
+              data-text-es="por">
+
+              by
+
+            </span>
+
             <a
               href="https://www.linkedin.com/in/martina-barboza-45114b24b/"
               target="_blank"
               rel="noopener noreferrer"
-              class="footer-social-link"
-            >
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a
-              href="https://github.com/martinabarboza" target="_blank"
-              class="footer-social-link"
-              title="GitHub"
-            >
-              <i class="fab fa-github"></i>
-            </a>
-            <a
-              href="https://x.com/martinabytes"
-              target="_blank" class="footer-social-link"
-              title="Twitter"
-            >
-              <i class="fab fa-twitter"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </footer>
+              class="footer-author-link">
 
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-    <script src="main.js"></script>
-  </body>
+              Mar
+
+            </a>
+
+          </p>
+
+        </div>
+
+
+        <div class="footer-social">
+
+          <a
+            href="https://www.linkedin.com/in/martina-barboza-45114b24b/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="footer-social-link">
+
+            in
+
+          </a>
+
+
+          <a
+            href="https://github.com/martinabarboza"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="footer-social-link">
+
+            gh
+
+          </a>
+
+
+          <a
+            href="https://x.com/martinabytes"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="footer-social-link">
+
+            𝕏
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =======================================================
+       SCRIPTS
+  ======================================================== -->
+
+  <script src="main.js"></script>
+
+</body>
 </html>

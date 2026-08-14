@@ -416,7 +416,6 @@ function initPageAnimations() {
     initScrollAnimations();
     initContactAnimations();
     animateStats();
-    initParallax();
     initSmoothScroll();
   }, 300);
 }
@@ -775,35 +774,6 @@ function initContactAnimations() {
   });
 }
 
-function initParallax() {
-  const profileImage = document.getElementById("profileImage");
-  if (!profileImage) return;
-
-  let ticking = false;
-  window.addEventListener("scroll", () => {
-    if (!ticking) {
-      window.requestAnimationFrame(() => {
-        const scrolled = window.pageYOffset;
-        const parallaxSpeed = 0.3;
-        const maxOffset = 100;
-        const offset = Math.min(scrolled * parallaxSpeed, maxOffset);
-
-        if (profileImage) {
-          profileImage.style.transform = `translateY(${offset}px)`;
-        }
-
-        const gridBg = document.querySelector(".code-grid-bg");
-        if (gridBg) {
-          gridBg.style.transform = `translateY(${scrolled * 0.2}px)`;
-        }
-
-        ticking = false;
-      });
-      ticking = true;
-    }
-  });
-}
-
 function initSmoothScroll() {
   const sections = document.querySelectorAll("section[id]");
   const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
@@ -861,7 +831,6 @@ function initSmoothScroll() {
 }
 
 window.Animation = {
-  initParallax,
   initSmoothScroll,
 };
 
